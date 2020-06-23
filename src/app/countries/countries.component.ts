@@ -1,7 +1,7 @@
 import { AppState } from './../reducers/index';
 import { Component, OnInit } from '@angular/core';
 import { CountriesService } from './countries.service';
-import { Country } from '../models/country.model';
+import { Country, RegionList } from '../models/country.model';
 import { Store } from '@ngrx/store';
 import { selectedCountries } from './countries.actions';
 
@@ -11,7 +11,7 @@ import { selectedCountries } from './countries.actions';
   styleUrls: ['./countries.component.scss']
 })
 export class CountriesComponent implements OnInit {
-  regionList = [{
+  regionList: RegionList[] = [{
     name: 'Asia',
     value: 'asia'
   },

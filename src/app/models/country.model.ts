@@ -57,3 +57,8 @@ export interface RegionalBlocs {
   otherAcronyms: Array<any>;
   otherNames: Array<any>;
 }
+
+export interface RegionList {
+  name: string;
+  value: string;
+}

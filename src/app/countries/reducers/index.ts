@@ -13,7 +13,7 @@ export interface CountriesModuleState {
 
 export const intialCountriesModuleState: CountriesModuleState = {
     selectedCountryList: []
-}
+};
 
 export const countriesReducer = createReducer(
 
@@ -22,7 +22,7 @@ export const countriesReducer = createReducer(
     on(selectedCountries, (state, action) => {
         return {
             selectedCountryList: action.selectedCountryList
-        }
+        };
     }),
 
 );
