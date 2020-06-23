@@ -1,0 +1,4 @@
+<select class="custom-select" (change)="optionChange($event.target)">
+  <option value="">Select the {{label}}</option>
+  <option *ngFor="let option of dropDownList">{{option.name}}</option>
+</select>

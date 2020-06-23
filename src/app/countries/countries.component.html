@@ -1,1 +1,3 @@
-<p>countries works!</p>
+<app-dropdown label='Region' [dropDownList]="regionList" (optionSelected)="regionDropDownChange($event)"></app-dropdown>
+
+<app-dropdown label='Country' [dropDownList]="selectedCountryList" (optionSelected)="countryDropDownChange($event)"></app-dropdown>
