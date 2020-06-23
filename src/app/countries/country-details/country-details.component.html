@@ -1,0 +1,22 @@
+<table *ngIf="selectedCountriesList.length > 0" class="country-details">
+    <tr>
+        <th>Name</th>
+        <th>Capital</th>
+        <th>Population</th>
+        <th>Currencies</th>
+        <th>Flag</th>
+    </tr>
+    <tr *ngFor="let country of selectedCountriesList">
+        <td>{{country.name}}</td>
+        <td>{{country.capital}}</td>
+        <td>{{country.population}}</td>
+        
+        <td>
+            <div *ngFor="let currency of country.currencies">
+            {{currency.name}}
+        </div>
+    </td>
+        <td>{{country.flag}}</td>
+    </tr>
+
+</table>

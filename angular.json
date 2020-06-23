@@ -123,6 +123,7 @@
   },
   "defaultProject": "countries-app",
   "cli": {
+    "defaultCollection": "@ngrx/schematics",
     "analytics": false
   }
 }

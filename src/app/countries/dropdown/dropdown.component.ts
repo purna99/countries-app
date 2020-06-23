@@ -19,7 +19,6 @@ export class DropdownComponent implements OnInit {
   }
 
   optionChange(event) {
-    console.log('selected option', event);
     this.optionSelected.emit(event);
   }
 

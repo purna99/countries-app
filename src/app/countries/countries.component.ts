@@ -1,6 +1,9 @@
+import { AppState } from './../reducers/index';
 import { Component, OnInit } from '@angular/core';
 import { CountriesService } from './countries.service';
 import { Country } from '../models/country.model';
+import { Store } from '@ngrx/store';
+import { selectedCountries } from './countries.actions';
 
 @Component({
   selector: 'app-countries',
@@ -18,7 +21,10 @@ export class CountriesComponent implements OnInit {
   }];
   selectedCountryList: Country[];
 
-  constructor(private countriesService: CountriesService) {}
+  constructor(
+    private countriesService: CountriesService,
+    public store: Store<AppState>
+    ) {}
 
   ngOnInit(): void {
   }
@@ -31,7 +37,8 @@ export class CountriesComponent implements OnInit {
   }
 
   countryDropDownChange(event) {
-    console.log('country', event);
+    const selectedCountry = this.selectedCountryList.filter(country => country.name === event.value);
+    this.store.dispatch(selectedCountries({selectedCountryList: selectedCountry}));
   }
 
 }
