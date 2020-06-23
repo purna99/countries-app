@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "countries-app"
+    }
+  },
+  "defaultProject": "countries-app",
+  "cli": {
+    "analytics": false
+  }
 }
